@@ -38,3 +38,22 @@ body {
     color: white;
 }
 
+.dashboard {
+    min-height: 100vh;
+    padding: 4rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.dashboard__content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+
+    gap: 1.5rem;
+    justify-content: center;
+    grid-template-columns: repeat(1, minmax(300px, 330px));
+}
+
