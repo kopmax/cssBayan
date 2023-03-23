@@ -1,29 +1,47 @@
 
-let heroImg = document.querySelector('#heroImg')
-let rBtn = document.querySelector('.rightBtn')
-let lBtn = document.querySelector('.leftBtn')
+let heroImg = window.document.querySelector('.heroImg')
+// let rBtn = window.document.querySelector('.rightBtn')
+// let lBtn = window.document.querySelector('.leftBtn')
+let imgBlock = window.document.querySelector('.hero-sprite-focus')
 let rightPostion = 0
+let imgBlockPosition = 0
+let timer = null
+let halfWidth = window.screen.width / 2
 
 
-const clickHandler = () => {
-    if (heroImg.style.backgroundColor === 'grey') {
-        heroImg.style.backgroundColor = "blue"
-    }
-    else {
-        heroImgImg.style.backgroundColor = 'grey'
-    }
+
+
+
+let onTouchStart = (event) => {
+    let x = event.screenX
+    console.log(halfWidth)
+    if (x > halfWidth) move = rightHandler
+    else move = leftHandler
+    timer = setInterval(() => {
+        move()
+    }, 100)
+}
+
+let onTouchEnd = (event) => {
+    clearInterval(timer)
 }
 
 const rightHandler = () => {
-    rightPostion = rightPostion + 20
-    heroImg.style.left = `${rightPostion}px`
+    rightPostion = rightPostion + 1
+    imgBlockPosition = imgBlockPosition + 1
+    if (rightPostion > 5) rightPostion = 0
+    heroImg.style.left = `-${rightPostion*288}px`
+    imgBlock.style.left = `${imgBlockPosition*20}px`    
 }
 
 const leftHandler = () => {
-    rightPostion = rightPostion - 20
-    heroImg.style.left = `${rightPostion}px`
+    heroImg.style.transform = 'scale(1, 1)'
+    rightPostion = rightPostion + 1
+    imgBlockPosition = imgBlockPosition + 1
+    if (rightPostion > 5) rightPostion = 0
+    heroImg.style.left = `-${rightPostion*288}px`
+    imgBlock.style.left = `${imgBlockPosition*20}px`
 }
 
-heroImg.onclick = clickHandler;
-rBtn.onclick = rightHandler;
-lBtn.onclick = leftHandler;
+window.onmousedown = onTouchStart;
+window.onmouseup = onTouchEnd;

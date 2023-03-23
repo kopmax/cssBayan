@@ -23,11 +23,17 @@
 
 .heroImg {
     width: 1728px;
-    height: 1152px;;
+    height: 1152px;
+    position: relative;
+    top: -576px;
+    left: 0px;
+    transform: scale(-1, 1);
 }
 
 .hero-sprite-focus {
     width: 288px;
     height: 288px;
     overflow: hidden;
+    position: relative;
+    left: 0px;
 }
