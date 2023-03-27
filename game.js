@@ -22,9 +22,7 @@ let direction = 'right'
 let imgBlockPosition = 0
 let timer = null
 const lifeCycle = () => {
-    timer = setInterval(() => {
-        standHandler()
-    }, 100)
+    timer = setInterval(standHandler, 150)
 }
 let halfWidth = window.screen.width / 2
 
@@ -74,22 +72,18 @@ const leftHandler = () => {
 const standHandler = () => {
     heroImg.style.transform = "scale(-1, 1)"
     
-    imgBlockPosition = imgBlockPosition + 1
-    if (rightPostion > 4) rightPostion = 1
+    // imgBlockPosition = imgBlockPosition + 1
+    // if (rightPostion > 4) rightPostion = 1
 
     switch (direction) {
         case 'right' : {
             heroImg.style.transform = "scale(-1, 1)"
-        rightPostion = rightPostion + 1
-        imgBlockPosition = imgBlockPosition + 1
-        if (rightPostion > 3) rightPostion = 0
+            if (rightPostion > 4) rightPostion = 1
             break
         }
         case 'left' : {
             heroImg.style.transform = "scale(1, 1)"
-        rightPostion = rightPostion + 1
-        imgBlockPosition = imgBlockPosition + 1
-        if (rightPostion > 5) rightPostion = 0
+            if (rightPostion > 3) rightPostion = 0
             break
         }
         default: break;
@@ -97,9 +91,8 @@ const standHandler = () => {
 
     rightPostion = rightPostion + 1
     heroImg.style.left = `-${rightPostion*288}px`
-    heroImg.style.top = '-0px'
-    // imgBlock.style.left = `${imgBlockPosition*20}px` 
-}
+    heroImg.style.top = '0px'
+    }
 
 window.onmousedown = onTouchStart;
 window.onmouseup = onTouchEnd;
