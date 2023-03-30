@@ -73,7 +73,7 @@ p {
     justify-content: center;
     height: 750px;
     padding-top: 100px;
-    background: #31344e url('intro-bg.jpg') center no-repeat ;
+    background: #31344e url('img/intro-bg.jpg') center no-repeat ;
 }
 
 .intro__inner {
@@ -126,4 +126,37 @@ p {
 
 .btn--red:hover {
     background-color: rgb(163, 64, 64);    
+}
+
+
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0;
+}
+
+.feature__item{
+    width: 33.333333%;
+    text-align: center;
+    padding: 0 30px;
+    margin: 25px 0;
+}
+
+.features__icon {
+    margin-bottom: 20px;
+}
+
+.features__title {
+    font-size: 14px;
+    color: #2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.features__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c7279;
 }
