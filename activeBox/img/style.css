@@ -281,7 +281,62 @@ p {
     height: 40px;
     border: #83898f solid 1px;
     margin-right: 4px;
+    transition: background linear 1s;
+}
+
+.social__item:hover {
+    background-color: red;
 }
 /* Team  */
+
+/* rewiews */
+.rewiews {
+    overflow: hidden;
+    background-color: #57323a;
+}
+
+.rewiews__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rewiews__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.rewiews__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.rewiews__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+}
+
+.rewiews__text {
+    margin-bottom: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff
+}
+
+.rewiews__autor {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+/* rewiews */
 
 
