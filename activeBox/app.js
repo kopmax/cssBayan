@@ -35,7 +35,7 @@ $(function() {
         console.log(elementOffset)
 
         $('html, body').animate({
-            screenTop:elementOffset
+            scrollTop: elementOffset
         })
     })
 
