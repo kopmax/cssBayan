@@ -1,0 +1,532 @@
+body {
+    margin: 0;
+    font-family: 'Roboto',  sans-serif;
+    /* font-size: 14px;
+    color: white; */
+    background-color: white;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #6c7279 1px solid;
+    padding: 35px 0;
+    align-items: center;
+}
+
+.nav {
+
+}
+
+.nav__link {
+    padding-left: 50px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity .2s linear;
+}
+
+.nav__link:first-child {
+    padding: 0px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 750px;
+    padding-top: 100px;
+    background: #31344e url('img/intro-bg.jpg') center no-repeat ;
+    background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro__title {
+    margin: 0 0 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 65px;
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    font-size: 22px;
+    color: white;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    vertical-align: top;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+
+    transition: background .1s linear;
+}
+
+.btn--red {
+    background-color: red;    
+}
+
+.btn--red:hover {
+    background-color: rgb(163, 64, 64);    
+}
+
+.btn__long {
+    min-width: 280px;
+}
+
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0;
+}
+
+.feature__item{
+    width: 33.333333%;
+    text-align: center;
+    padding: 0 30px;
+    margin: 25px 0;
+}
+
+.features__icon {
+    margin-bottom: 20px;
+}
+
+.features__title {
+    font-size: 14px;
+    color: #2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.features__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c7279;
+}
+
+/* Works */
+.works {
+    /* width: 1200px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.works__item {
+    width: 25%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    border-right:  1px solid #fff;
+}
+
+.works__item:hover .works__content {
+    opacity: 1;
+}
+
+.works__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.works__content {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, .7);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    transition: opacity linear .2s;
+}
+
+.works__title {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.works__text {
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #fff;
+}
+/* Works */
+
+/* Team  */
+.team {
+    margin: 100px 0 70px;
+}
+
+
+
+.team__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.team__item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team__name {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.team__prof {
+    font-size: 13px;
+    color: red;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.team__text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.social {
+    display: flex;
+}
+
+.social--footer {
+    justify-content: center;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: #83898f solid 1px;
+    margin-right: 4px;
+    transition: background linear 1s;
+}
+
+.social__item:hover {
+    background-color: red;
+}
+/* Team  */
+
+/* rewiews */
+.rewiews {
+    overflow: hidden;
+    background-color: #57323a;
+}
+
+.rewiews__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rewiews__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.rewiews__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.rewiews__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+}
+
+.rewiews__text {
+    margin-bottom: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff
+}
+
+.rewiews__autor {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+/* rewiews */
+
+/* download  */
+.download {
+    margin: 90px 0;
+    text-align: center;
+}
+
+.download__title {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.download__text {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+/* download  */
+
+/* footer  */
+.footer {
+    background-color: #301c5a;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0;
+
+}
+
+.footer__block {
+    width: 33.3333%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer__title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer__address {
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+    color: #fff;
+    opacity: .5;
+}
+
+.footer__text {
+    color: #fff;
+    opacity: .5;
+}
+
+.copyright{
+    padding: 20px 0;
+    background-color: #31344e;
+}
+
+.copyright__text{
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.copyright__text all__rights{
+    opacity: .5
+}
+
+.name {
+    color: white;
+
+}
+
+
+/* footer  */
+
+
+/* media  */
+
+.burger {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 9px 2px;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+
+    font-size: 0;
+    /* color: transparent; */
+    position: relative;
+    
+}
+
+.burger__item::before,
+.burger__item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.burger__item::before {
+    top: -8px;
+}
+
+.burger__item::after {
+    bottom: -8px;
+}
+
+@media (max-width: 1300px) {
+
+    .works__item {
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 991px) {
+
+    .nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .intro__title {
+        font-size: 40px;
+    }
+
+    .feature__item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .intro {
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__subtitle {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .feature__item {
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .works__item {
+        width: 100%;
+    }
+}
+
+
