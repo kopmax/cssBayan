@@ -33,7 +33,17 @@ p {
     top: 0;
     left: 0;
     z-index: 1000;
+}
 
+.header.fixed {
+    position: fixed;
+    background: #31344e;
+    height: auto;
+}
+
+.header.fixed .header__inner{
+    padding: 15px 0;
+    border-bottom: 0;
 }
 
 .header__inner {
