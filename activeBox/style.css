@@ -496,7 +496,10 @@ p {
 @media (max-width: 991px) {
 
     .nav {
-        display: none;
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        top: 100%;
     }
 
     .burger {

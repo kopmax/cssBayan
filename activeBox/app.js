@@ -6,17 +6,23 @@ $(function() {
     let introH = intro.innerHeight()
     let scrollPos = $(window).scrollTop()
 
+    checkScroll(scrollPos, introH)
+
     $(window).on('scroll', function() {
         scrollPos = $(this).scrollTop()
 
+        checkScroll(scrollPos, introH)
+
+        // console.log(scrollPos)
+    })
+
+    function checkScroll(scrollPos, introH) {
         if(scrollPos > introH) {
             header.addClass('fixed')
         } else {
             header.removeClass('fixed')
         }
-
-        // console.log(scrollPos)
-    })
+    }
 
     // console.log(scrollPos)
 
@@ -35,9 +41,14 @@ $(function() {
         console.log(elementOffset)
 
         $('html, body').animate({
-            scrollTop: elementOffset
-        })
+            scrollTop: elementOffset - 70
+        }, 1000)
     })
 
     // SmoothScroll
+
+    // Menu 
+
+
+    // Menu 
 });
