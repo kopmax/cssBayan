@@ -55,7 +55,7 @@ p {
 }
 
 .nav {
-
+    display: flex;
 }
 
 .nav__link {
@@ -496,10 +496,25 @@ p {
 @media (max-width: 991px) {
 
     .nav {
-        /* display: none; */
+        display: none;
+        width: 100%;
+        text-align: right;
+        flex-direction: column;
         position: absolute;
         right: 0;
-        top: 100%;
+        top: 100%;   
+        background-color: #31344e;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+    .nav__link:first-child {
+        padding: 10px 15px;
+    }
+
+    .nav__link {
+        padding: 10px 15px;
     }
 
     .burger {
@@ -528,9 +543,26 @@ p {
         justify-content: center;
     }
 
+    .rewiews {
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    .reviews__slider {
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .rewiews__item {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
     .rewiews__photo {
-        width: 100%;
-        margin-bottom: 15px;
+        width: 50%;
+        height: 500px;
+        position: relative;
     }
 
     .rewiews__content {

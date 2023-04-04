@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./style.css">
     <title>ActiveBox</title>
 
@@ -20,7 +21,7 @@
                     <img src="./img/activebox-logo.png" alt="">
                 </div>
 
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <a href="#" class="nav__link" data-scroll="#features">Features</a>
                     <a href="#" class="nav__link" data-scroll="#works">Works</a>
                     <a href="#" class="nav__link" data-scroll="#team">Our team</a>
@@ -28,7 +29,7 @@
                     <a href="#" class="nav__link" data-scroll="#download">Download</a>
                 </nav>
 
-                <button class="burger" type="button">
+                <button class="burger" type="button" id="navToggle">
                     <span class="burger__item">Menu</span>
                 </button>
 
@@ -322,21 +323,42 @@
 
     <div class="rewiews" id="rewies">
         <div class="container">
+            <div class="reviews__slider" id="reviewsSlider">
 
-            <div class="rewiews__item">
-                <div class="rewiews__photo">
-                    <img class="rewiews__img" src="./img/reviews/review-1.jpg" alt="" srcset="">
-                </div>
-                <div class="rewiews__content">
-                    <div class="rewiews__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sint tempora amet quas dolor fuga assumenda quia sit, autem, nulla repellat sunt?
+                    <div class="slick-item">
+                        <div class="rewiews__item">
+                            <div class="rewiews__photo">
+                                <img class="rewiews__img" src="./img/reviews/review-1.jpg" alt="" srcset="">
+                            </div>
+                            <div class="rewiews__content">
+                                <div class="rewiews__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sint tempora amet quas dolor fuga assumenda quia sit, autem, nulla repellat sunt?
+                                </div>
+                                <div class="rewiews__autor">
+                                    Autor name
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="rewiews__autor">
-                        Autor name
+
+                    <div class="slick-item">
+                        <div class="rewiews__item">
+                            <div class="rewiews__photo">
+                                <img class="rewiews__img" src="./img/reviews/review-1.jpg" alt="" srcset="">
+                            </div>
+                            <div class="rewiews__content">
+                                <div class="rewiews__text">
+                                    Lorem ipsum dolor sit amla repellat sunt?
+                                </div>
+                                <div class="rewiews__autor">
+                                    Autor name
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
-
         </div>
     </div>
 
@@ -405,6 +427,8 @@
     </div>
 </footer>
 <!-- footer  -->
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script src="./app.js"></script>
 
