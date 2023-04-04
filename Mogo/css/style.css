@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro__suptitle{
     margin-bottom: 20px;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Kaushan Script';
     font-size: 72px;
 }
 
@@ -209,4 +209,44 @@ h1, h2, h3, h4, h5, h6 {
 .slider__num {
     font-size: 24px;
     font-weight: 700;
+}
+
+/* section  */
+
+.section {
+    padding: 80px 0;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section__suptitle {
+    font-family: 'Kaushan Script';
+    font-size: 24px;
+    color: #333;
+}
+
+.section__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: red;
+    margin: 30px auto;
+}
+
+.section__text {
+    color: #999;
+    font-size: 15px;
 }
