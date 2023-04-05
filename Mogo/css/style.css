@@ -120,8 +120,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 1s linear;
 }
 
-.nav__link:hover, {
-    color: #yellow;
+.nav__link:hover {
+    color: yellow;
 }
 
 .nav__link:hover::after,
