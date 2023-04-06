@@ -438,6 +438,12 @@ hr {
 }
 
 .accordion__item.active
+.accordion__header {
+    border-bottom-color: #999;
+}
+
+
+.accordion__item.active
 .accordion__header::after {
     transform: translateY(-50%)
     rotate(-45deg);
@@ -447,7 +453,9 @@ hr {
 .accordion__header {
     padding:  15px 20px 15px 65px;
     position: relative;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    
 }
 
 .accordion__header::after {
